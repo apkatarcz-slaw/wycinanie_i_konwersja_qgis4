@@ -1,0 +1,19 @@
+[general]
+name=Wycinanie i konwersja QGIS 4 (rastry i wektory) - Clipping and conversion QGIS 4 (rasters and vectors)
+qgisMinimumVersion=4.0
+qgisMaximumVersion=4.99
+description=[QGIS 4 / Qt6] Wsadowe wycinanie i konwersja formatu rastrow (wg arkuszy) i wektorow (wg poligonow, w tym geobaza ESRI) bez zmiany ukladu wspolrzednych danych. Batch clipping and format conversion of rasters (by map sheets) and vectors (by polygons, incl. ESRI File Geodatabase) without changing the data CRS.
+version=1.0.1
+author=Sławek Szymański
+email=apka.tarcz@gmail.com
+about=RASTRY: wycinanie wsadowe po siatce arkuszy (jeden plik SHP/GPKG = jeden arkusz o nazwie rastra), zasieg dopasowany do siatki pikseli, tlo + maska albo kanal alfa, konwersja formatu (GeoTIFF, COG, JPEG, PNG, JPEG 2000, WebP, BMP, IMG) z automatycznym plikiem georeferencyjnym, czysta konwersja bez przeliczen (gdal_translate), wymuszenie 8-bit, DPI, resampling, tryb malo miejsca na dysku; pliki bez ukladu (np. JPG z samym .jgw) - uklad z arkusza, z listy (domyslnie EPSG:2180) albo wycinanie bez ukladu. WEKTORY: konwersja formatu wszystkich danych czytanych przez QGIS (SHP, GPKG, geobaza ESRI .gdb, GML, GeoJSON, KML, DXF, TAB, CSV, FlatGeobuf, SQLite) do GPKG, GDB, SHP, GeoJSON, GML, TAB, FlatGeobuf, SQLite, DXF, CSV - bez przeliczen; wycinanie poligonami z folderu (kazda warstwa = osobny katalog wynikowy), przyciecie geometrii albo wybor obiektow w calosci. Raporty CSV, interfejs dwujezyczny PL/EN. RASTERS: batch clipping by map sheets, format conversion with world files, pure conversion without transformation. VECTORS: format conversion (incl. ESRI File Geodatabase) and clipping by polygons, no transformation. CSV reports, bilingual PL/EN interface.
+tags=qgis4,qt6,raster,vector,batch,wsadowo,clip,wycinanie,konwersja,conversion,arkusze,map sheets,geodatabase,gdb,shp,gpkg,geotiff,poland,polska
+repository=https://github.com/apkatarcz-slaw/wycinanie_i_konwersja_qgis4
+tracker=https://github.com/apkatarcz-slaw/wycinanie_i_konwersja_qgis4/issues
+homepage=https://github.com/apkatarcz-slaw/wycinanie_i_konwersja_qgis4
+license=GPL-3.0-or-later
+category=Raster
+icon=icon.png
+experimental=False
+changelog=1.0.1: kod sprawdzony narzedziami skanu repozytorium QGIS: Bandit 0 uwag, detect-secrets 0, Flake8 0 (PEP 8, linie do 79 znakow); bledy nie sa juz cicho pomijane (zapis do logu). Code passes the QGIS repository scan tools: Bandit, detect-secrets, Flake8 with no findings.
+    1.0.0: osobna wtyczka dla QGIS 4 (Qt6 / PyQt6), funkcje jak w wersji 2.1.2 dla QGIS 3. Separate plugin for QGIS 4 (Qt6 / PyQt6), same features as 2.1.2 for QGIS 3.
